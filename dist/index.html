@@ -7,10 +7,38 @@
 
   <link rel="stylesheet" href="./css/style.css">
   <link rel="favicon" href="./images/favicon.svg">
-  
+
   <script defer src="main.js"></script>
 </head>
 <body>
-  
+  <!-- TODO: implement twitters 140 character limit -->
+
+
+  <!-- TODO: put required on each input field -->
+
+  <h1>Basic Form Validation</h1>
+
+  <form id="signup-form" autocomplete="off">
+
+    <label for="email">Email:</label>
+    <input id="email" type="email" placeholder="me@example.com" required>
+
+    <label for="country">Country:</label>
+    <input id="country" type="text" placeholder="should have been a selection" required>
+
+    <label for="postal-code">Postal Code:</label>
+    <input id="postal-code" type="text" placeholder="B4D 8O1" required>
+
+    <label for="password">Password:</label>
+    <input id="password" type="password" placeholder="enter password" required>
+
+    <label for="password-confirm">Re-Enter Password:</label>
+    <input id="password-confirm" type="password" placeholder="re-enter password" required>
+
+    <label for="about">What's on your mind?</label>
+    <textarea name="about" id="about" cols="25" rows="8" minlength="1" maxlength="140" required></textarea>
+    <div id="character-limit">characters remaining: <span id="remainder">140</span></div>
+    <button id="submit-button">Submit</button>
+  </form>
 </body>
 </html>
