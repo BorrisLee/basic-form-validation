@@ -56,6 +56,12 @@ h1 {
   font-weight: 800;
 }
 
+/*
+      ===========
+      FORM STYLES
+      ===========
+*/
+
 form {
   display: flex;
   flex-direction: column;
@@ -70,12 +76,22 @@ form {
   padding: 3rem 6rem;
 }
 
-label {
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+label {
   color: rgba(0, 0, 0, 0.6);
   font-weight: 800;
 }
 
+/*
+      ============
+      INPUT STYLES
+      ============
+*/
 input {
   margin: 1rem;
   padding: 0.5rem;
@@ -103,9 +119,13 @@ input:focus {
   outline: none;
 }
 
+/*
+      ===============
+      TEXTAREA STYLES
+      ===============
+*/
 textarea {
-
-  margin: .5rem;
+  margin: 0.5rem;
   padding: 1rem;
 
   background: rgba(147, 147, 255, 0.1);
@@ -116,16 +136,20 @@ textarea {
 }
 
 textarea:focus {
-
   transform: scale(1.05);
 
   outline: none;
 }
 
 #character-limit {
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
+/* 
+      =============
+      BUTTON STYLES
+      =============
+*/
 button {
   margin: 1rem;
   padding: 0.7rem 1rem;
@@ -141,7 +165,6 @@ button {
 }
 
 button:focus {
-
   background: rgba(126, 225, 255, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.3);
 
@@ -149,6 +172,12 @@ button:focus {
 
   outline: none;
 }
+
+/*
+      ====================
+      VALID/INVALID STYLES
+      ====================
+*/
 
 input:not(:placeholder-shown):invalid {
   background: rgba(255, 0, 0, 0.1);
@@ -158,4 +187,72 @@ input:not(:placeholder-shown):invalid {
 input:not(:placeholder-shown):valid {
   background: rgba(0, 255, 0, 0.1);
   border: 1px solid rgba(169, 169, 255, 0.5);
+}
+
+.error-message {
+  display: inline-block;
+  background: red;
+  border-radius: 0.25rem;
+
+  padding: 0.3rem;
+
+  text-align: center;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 800;
+
+  margin: 0.5rem;
+
+  visibility: hidden;
+}
+
+/*
+      ============
+      ICONS STYLES
+      ============
+*/
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.5rem;
+}
+
+.fa-check-circle {
+  position: absolute;
+  color: green;
+
+  visibility: hidden;
+}
+
+.fa-exclamation-circle {
+  position: absolute;
+  color: red;
+
+  visibility: hidden;
+}
+
+/*
+      ====================
+      FORM COMPLETE STYLES
+      ====================
+*/
+.ok-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #fff;
+  border: 1px solid rgb(0, 0, 0, .5);
+  border-radius: 2rem;
+
+  padding: 5rem;
+  margin: 10rem auto;
+}
+
+.fa-frog {
+
+  transform: scale(5);
+
+  color: rgb(83, 190, 110);
 }
